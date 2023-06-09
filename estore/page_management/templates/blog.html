@@ -1,0 +1,56 @@
+{% extends 'page_base.html' %}
+
+{% block title %}
+    Blog - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="container">
+    <h1 class="text-center mt-5">Blog</h1>
+    <div class="row mt-5">
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <img src="image1.jpg" class="card-img-top" alt="Blog Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Blog Post Title 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend ligula sed est venenatis, at fringilla felis gravida.</p>
+            <a href="blog-post1.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <img src="image2.jpg" class="card-img-top" alt="Blog Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Blog Post Title 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend ligula sed est venenatis, at fringilla felis gravida.</p>
+            <a href="blog-post2.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Categories</h5>
+            <ul class="list-group">
+              <li class="list-group-item">Category 1</li>
+              <li class="list-group-item">Category 2</li>
+              <li class="list-group-item">Category 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+

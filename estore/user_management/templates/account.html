@@ -1,0 +1,71 @@
+{% extends 'page_base.html' %}
+
+{% block title %}
+    Blog - {{ block.super }}
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <div class="row">
+
+
+  </div>
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Profile Photo Section -->
+          <div class="text-center">
+            <img src="res/userphoto.jpeg" alt="Profile Photo" class="profile-photo"/>
+          </div>
+          <h4 class="mt-3">
+            Sample Data
+
+          </h4>
+          <p class="text-muted">Customer</p>
+        </div>
+        <div class="col-md-8">
+          <!-- Purchase History Section -->
+          <h5>Purchase History</h5>
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <img src="res/product1.jpeg" alt="Product Image" class="img-fluid">
+                    </div>
+                    <div class="col-sm-9">
+                      <h6>Product Name</h6>
+                      <p class="text-muted">Order Date: 2023-05-31</p>
+                      <p>Order Total: $50.00</p>
+                      <a href="product.html" class="btn btn-primary">View Details</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- Add more purchase history items here -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Other Important Sections -->
+          <div class="mt-4">
+            <h5>Personal Information</h5>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: 123-456-7890</p>
+            <!-- Add more personal information fields here -->
+
+            <h5 class="mt-4">Shipping Address</h5>
+            <p>123 Street, City, State, ZIP Code</p>
+            <!-- Add more shipping address fields here -->
+
+            <h5 class="mt-4">Payment Methods</h5>
+            <p>Credit Card: **** **** **** 1234</p>
+            <!-- Add more payment methods or details here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
+
+<!-- Account Main -->
+

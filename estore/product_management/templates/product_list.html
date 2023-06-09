@@ -1,0 +1,40 @@
+<!-- product_list.html -->
+
+{% extends 'page_base.html' %}
+
+{% block content %}
+  <h1>Product List</h1>
+
+  {% if products %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.created_at }}</td>
+            <td>{{ product.updated_at }}</td>
+            <td>
+              <a href="{% url 'product-detail' product.pk %}">Details</a>
+              <a href="{% url 'product-update' product.pk %}">Update</a>
+              <a href="{% url 'product-delete' product.pk %}">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No products found.</p>
+  {% endif %}
+{% endblock %}

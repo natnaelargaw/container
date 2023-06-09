@@ -1,0 +1,24 @@
+<!-- product_update.html -->
+
+{% extends 'page_base.html' %}
+
+{% block content %}
+  <h1>Update Product</h1>
+
+  <form method="post" action="{% url 'product-update' product.pk %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="{{ product.name }}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" class="form-control">{{ product.description }}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" name="price" id="price" value="{{ product.price }}" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+{% endblock %}
